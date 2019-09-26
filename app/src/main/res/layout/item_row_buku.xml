@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="@dimen/padding16">
+
+    <ImageView
+        android:id="@+id/ivItemPhoto"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="@dimen/padding16"
+        tools:src="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tvItemNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Harry Potter"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen5">
+
+            <TextView
+                android:id="@+id/tvItemWaktuTerbit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="28 Ferbruary 2012"
+                android:textStyle="italic"
+                android:textColor="@color/abuabu"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="/"
+                android:layout_marginStart="@dimen/dimen5"
+                android:layout_marginEnd="@dimen/dimen5"
+                android:textStyle="italic"
+                android:textColor="@color/abuabu"/>
+
+            <TextView
+                android:id="@+id/tvItemLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Inggris"
+                android:textStyle="italic"
+                android:textColor="@color/abuabu"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_star_black_24dp"
+                android:layout_marginEnd="@dimen/dimen5"/>
+
+            <TextView
+                android:id="@+id/tvItemRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen10"
+                android:text="7.8"
+                android:layout_marginEnd="@dimen/dimen5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="(Author)"
+                android:textStyle="italic"
+                android:textColor="@color/abuabu"/>
+
+            <TextView
+                android:id="@+id/tvItemAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Austin Kleon"
+                android:layout_marginStart="@dimen/dimen5"
+                android:textColor="@color/bluetext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="(Author)"
+                android:textStyle="italic"
+                android:textColor="@color/abuabu"/>
+
+            <TextView
+                android:id="@+id/tvItemGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/dimen5"
+                android:text="Horror and Fiction"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
