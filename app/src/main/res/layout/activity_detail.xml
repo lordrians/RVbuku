@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".detailActivity"
-    android:padding="25dp">
+    android:layout_margin="25dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 android:id="@+id/tvDetailNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="13sp"
                 android:text="Harry Potter"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
@@ -148,22 +148,36 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:text="Deskripsi Singkat"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/tvDetailDesk"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="asfaskfasfljaksjfaskfjnk"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="@dimen/dimen10"/>
+        android:fillViewport="true"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDetailDesk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="asfaskfasfljaksjfaskfjnk"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dimen10"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>

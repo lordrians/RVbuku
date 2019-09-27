@@ -1,6 +1,7 @@
 package com.example.rvbuku.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.rvbuku.R;
 import com.example.rvbuku.model.Buku;
+import com.example.rvbuku.detailActivity;
 
 import java.util.ArrayList;
 
@@ -23,7 +25,9 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ListViewHolder
     private ArrayList<Buku> listBuku;
     Context context;
 
-    public BookAdapter(ArrayList<Buku> list){
+
+
+    public BookAdapter(ArrayList<Buku> list, Context context) {
         this.listBuku = list;
         this.context = context;
     }
@@ -48,6 +52,22 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ListViewHolder
         holder.tvRate.setText(buku.getRate());
         holder.tvAuthor.setText(buku.getAuthor());
         holder.tvGenre.setText(buku.getGenre());
+        holder.LLItemBuku.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, detailActivity.class );
+                intent.putExtra("putNama", listBuku.get(position).getName());
+                intent.putExtra("putTime", listBuku.get(position).getTime());
+                intent.putExtra("putPublisher", listBuku.get(position).getPublisher());
+                intent.putExtra("putAuthor", listBuku.get(position).getAuthor());
+                intent.putExtra("putGenre", listBuku.get(position).getGenre());
+                intent.putExtra("putDesc", listBuku.get(position).getDesc());
+                intent.putExtra("putRate", listBuku.get(position).getRate());
+                intent.putExtra("putPhoto", listBuku.get(position).getPhoto());
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
